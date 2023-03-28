@@ -8,6 +8,7 @@ import Div from 'common/Div';
 import styles from './styles';
 import { IHeaderMenuProperties } from './types';
 import { NameItemMenu } from 'components/App/types';
+import { itemNames } from './constants';
 
 const HeaderMenu: FC<IHeaderMenuProperties> = (properties) => {
   const { currentItemMenu, onChangeItemMenu } = properties;
@@ -18,30 +19,16 @@ const HeaderMenu: FC<IHeaderMenuProperties> = (properties) => {
 
   return (
     <Div sx={styles.root}>
-      <Typography sx={muiSx(styles.menuItem, {
-          condition: currentItemMenu === NameItemMenu.WORKS,
+      {itemNames.map((item) => (
+        <Typography key={item.value} sx={muiSx(styles.menuItem, {
+          condition: currentItemMenu === item.value,
           sx: styles.selectItem
-        })}
-        onClick={handleOnClick(NameItemMenu.WORKS)}
-      >
-        Работы
-      </Typography>
-      <Typography sx={muiSx(styles.menuItem, {
-          condition: currentItemMenu === NameItemMenu.BLOG,
-          sx: styles.selectItem
-        })}
-        onClick={handleOnClick(NameItemMenu.BLOG)}
-      >
-        Блог
-      </Typography>
-      <Typography sx={muiSx(styles.menuItem, {
-          condition: currentItemMenu === NameItemMenu.CONTACTS,
-          sx: styles.selectItem
-        })}
-        onClick={handleOnClick(NameItemMenu.CONTACTS)}
-      >
-        Контакты
-      </Typography>
+          })}
+          onClick={handleOnClick(item.value)}
+        >
+          {item.label}
+        </Typography>
+      ))}
     </Div>
   );
 };
