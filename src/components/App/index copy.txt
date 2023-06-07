@@ -1,0 +1,49 @@
+import { ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
+
+import theme from 'utils/theme';
+import Div from 'common/Div';
+import styles from './styles';
+import HeaderMenu from 'components/HeaderMenu';
+import ImageGrid from 'components/ImageGrid';
+import { NameItemMenu } from './types';
+import { images } from 'components/ImageGrid/constants';
+import { IImage } from 'components/ImageGrid/types';
+
+
+function App() {
+  const [selectMenuItem, setSelectMenuItem] = useState<NameItemMenu>(NameItemMenu.WORKS);
+  const [selectedImage, setSelectedImage] = useState<IImage | null>(images[1]);
+
+  const handleChangeItemMenu = (newCurrent: NameItemMenu) => {
+    setSelectMenuItem(newCurrent);
+  };
+
+  const handleSelectedImage = (selectedImage: IImage) => {
+    setSelectedImage(selectedImage);
+  };
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Div sx={styles.root}>
+        <HeaderMenu
+          currentItemMenu={selectMenuItem}
+          onChangeItemMenu={handleChangeItemMenu}
+        />
+        {/* <Div> */}
+          <ImageGrid
+            images={images}
+            onSelectImage={handleSelectedImage}
+          />
+        {/* </Div> */}
+        <Div sx={styles.kek}>
+          <Div sx={styles.viewer}>
+            <h4>Kek</h4>
+          </Div>
+        </Div>
+      </Div>
+    </ThemeProvider>
+  );
+}
+
+export default App;

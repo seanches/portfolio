@@ -9,7 +9,7 @@ const styles = {
     backgroundColor: 'primary.main',
   },
   menuItem: {
-    marginRight: '30px',
+    marginRight: '60px',
     fontSize: '25px',
     color: 'text.primary',
     cursor: 'pointer',

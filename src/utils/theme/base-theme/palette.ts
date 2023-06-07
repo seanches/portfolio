@@ -3,10 +3,10 @@ import { PaletteOptions } from '@mui/material';
 const PRIMARY_COLOR = '#353A49';
 
 export const palette: PaletteOptions = {
-  primary: {
-    light: '#838AA4',
-    main: PRIMARY_COLOR,
-  },
+  // primary: {
+  //   light: '#838AA4',
+  //   main: PRIMARY_COLOR,
+  // },
   secondary: {
     main: '#6B674B',
     light: '#B5AF8C',
@@ -21,10 +21,10 @@ export const palette: PaletteOptions = {
     main: '#E01A3E',
     dark: '#C5002A',
   },
-  text: {
-    primary: '#FFFFFF',
-    secondary: '#586065',
-  },
+  // text: {
+  //   primary: '#FFFFFF',
+  //   secondary: '#586065',
+  // },
   warning: {
     light: '#FCF2CA',
     main: '#FFBB22',

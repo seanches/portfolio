@@ -3,3 +3,14 @@ export enum NameItemMenu {
   BLOG = 'BLOG',
   CONTACTS = 'CONTACTS',
 }
+
+export enum SideMenuItemNames {
+  MyPage = 'PAGE',
+  Feed = 'FEED',
+  Messages = 'MESSAGES',
+  Friends = 'FRIENDS',
+  Following = 'FOLLOWING',
+  Photos = 'PHOTOS',
+  Media = 'MEDIA',
+}
+

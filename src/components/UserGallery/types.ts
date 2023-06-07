@@ -1,6 +1,6 @@
 import { NameItemMenu } from 'components/App/types';
 
-export interface IHeaderMenuProperties {
+export interface IUserLocalsProperties {
   // currentItemMenu: NameItemMenu | null;
   // onChangeItemMenu: (newItem: NameItemMenu | null) => void;
 }
