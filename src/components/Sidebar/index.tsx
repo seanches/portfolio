@@ -1,6 +1,6 @@
 import Div from 'common/Div';
 import styles from './styles';
-import { Box, Toolbar, Button, SvgIcon } from '@mui/material';
+import { Box, Toolbar, Button, SvgIcon, CardActionArea } from '@mui/material';
 import { sideItemsList } from './constants';
 import { AppBar } from '@material-ui/core';
 
@@ -9,7 +9,9 @@ const Sidebar: React.FC = () => {
     <Box sx={{borderRadius: 3, backgroundColor: '#f5f5f5', margin: '0px 10px' }}>
     <nav>
       <ol style={styles.sidebar}>
+        
       {sideItemsList.map((item) => (
+        <CardActionArea sx={{ m: 0 }}>
         <li style={styles.listItem}>
           <a href={item.url} style={styles.linkContainer}>
             <Div sx={styles.iconContainer}>
@@ -18,7 +20,9 @@ const Sidebar: React.FC = () => {
             <span>{item.label}</span>
           </a>
         </li>
+        </CardActionArea>
       ))}
+      
       </ol>
     </nav>
     </Box>

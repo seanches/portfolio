@@ -5,9 +5,10 @@ import styles from './styles';
 import HeaderMenu from 'components/HeaderMenu';
 import Sidebar from 'components/Sidebar';
 import ProfileHeader from 'components/ProfileHeader';
-import UserLocals from 'components/FriendList';
+import FriendList from 'components/FriendList';
 import UserGallery from 'components/UserGallery';
 import theme from 'utils/theme';
+import PopupChat from 'components/ModalDialogue';
 
 function App() {
   
@@ -33,10 +34,12 @@ function App() {
               </Div>
             </Div>
             <Div sx={styles.stickyScroll} id='lol'>
-              <UserLocals />
+              <FriendList />
+              <Div sx={styles.gap} />
             </Div>
   
           </Div>
+          {/* <PopupChat /> */}
          </Div>
        </Div>
       </Div>

@@ -11,34 +11,41 @@ const styles = {
   profileCover: {
     width: '911px',
     height: '277px',
+    paddingTop: '25px',
+    marginTop: '-25px'
+    
 
   },
   profileHeader: {
     width: '871px',
-    height: '123px',
+    height: '83px',
     display: 'flex',
-    marginTop: '-25px',
-    padding: '20px'
+    marginTop: '-50px',
+    padding: '20px',
+    position: 'relative',
+    backgroundColor: 'darkgray',
+    borderRadius: 3, 
 
   },
   profileHeaderAvatar: {
     width: '150px',
     height: '178px',
-    marginTop: '-95px',
+    marginTop: '-115px',
   },
   userAvatar: {
     width: '150px',
     height: '150px',
+    display: 'block',
+    paddingTop: '20px',
   },
   profileHeaderWrapper: {
     width: '711px',
     height: '83px',
-    backgroundColor: '#f5f5f5',
     marginTop: '-25px',
     display: 'flex',
-    padding: '0px 5px',
+    padding: '20px 5px',
     marginLeft: '10px', 
-    borderRadius: 3, 
+    
  
   },
   profileInfo: {

@@ -28,7 +28,8 @@ const styles = {
     width: '911px',
     minHeight: '350px', 
     marginBottom: '20px',
-    backgroundColor: 'black',
+    backgroundColor: '#f5f5f5',
+    borderRadius: 3, 
   },
   thewall: {
     width: '911px',
@@ -45,7 +46,7 @@ const styles = {
     width: '345px',
     height: '1186px',
     backgroundColor: 'blue',
-    padding: '5px'
+    marginLeft: '15px'
   },
   sidebar: {
     display: 'flex',
@@ -58,7 +59,11 @@ const styles = {
     backgroundColor: 'grey',
 
   },
-
+  gap: {
+    width: '345px',
+    height: '16px',
+    
+  },
 };
   
 export default styles;

@@ -11,6 +11,8 @@ const styles = {
     listStyleType: 'none',
     fontSize: 'small',
     listStyleImage: 'none',
+    width: '160px',
+    height: '30px'
   },
   linkContainer: {
     display: 'flex',
